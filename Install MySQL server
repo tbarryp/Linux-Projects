@@ -1,0 +1,24 @@
+# Installing MySQL Server on RHEL8
+
+# Install MySQL
+sudo yum install mysql-server
+
+# Enable and start the Daemon myqld (MySQL service)
+sudo systemctl enable --now mysqld
+
+# Check the status of the Daemon mysqld
+sudo systemctl status mysqld
+
+# Set up the password
+# The MySQL installation routine sets up a default temporary password
+sudo grep ‘temporary password’ /var/log/mysqld.log
+
+# Secure and Configure the server
+# mysql_secure_installation is a shell script available on RHEL distribution
+sudo mysql_secure_installation 
+
+# Log into the server
+mysql -u root -p
+
+# Exit
+exit
