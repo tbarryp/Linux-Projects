@@ -1,2 +1,2 @@
 # Linux-Projects
-This is a Linux projects
+This is a Linux projects (RHEL and Debian distributions)
